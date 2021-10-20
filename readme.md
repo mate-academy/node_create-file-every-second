@@ -1,4 +1,4 @@
-# Create a life every second
+# Create a file every second
 Write an app that will create 1 file every 1 second in current directory
 (where the script is located).
 - File name must be in the following format: `app-<hours>_<minutes>_<seconds>.log`.
