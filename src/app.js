@@ -9,6 +9,7 @@ setInterval(() => {
 
   fs.appendFile(`./${currentTime}.txt`, `${date.toString()}`, (error) => {
     if (error) {
+
       // eslint-disable-next-line
       console.log('Something is wrong', error);
       process.exit();
