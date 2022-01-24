@@ -8,9 +8,11 @@ function getTimestamp(separator) {
   + `${date.getSeconds()}`;
 }
 
-const fileCreator = setInterval(() => {
+const fileCreator = setInterval(async() => {
   try {
-    fs.writeFile(`./app-${getTimestamp('_')}.txt`, new Date().toTimeString());
+    const fileContent = new Date().toTimeString();
+
+    await fs.writeFile(`./app-${getTimestamp('_')}.txt`, fileContent);
     console.log(getTimestamp('-'));
   } catch (error) {
     console.log(error);
