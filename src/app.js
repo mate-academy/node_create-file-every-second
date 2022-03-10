@@ -14,6 +14,7 @@ function createDateFile() {
     if (err) {
       throw err;
     }
+
     // eslint-disable-next-line no-console
     console.log(`
       File: ${fileName} was creates at: ${date.toLocaleTimeString()}
