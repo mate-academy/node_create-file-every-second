@@ -19,7 +19,7 @@ setInterval(() => {
       }
 
       console.log(
-        `Time of creation: ${timestamp.toTimeString()}, file name: ${fileName}`
+        `Created at: ${timestamp.toTimeString()}, file name: ${fileName}`
       );
     }
   );
