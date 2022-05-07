@@ -6,7 +6,7 @@ setInterval(() => {
   const hours = timestamp.getHours();
   const minutes = timestamp.getMinutes();
   const seconds = timestamp.getSeconds();
-  const fileName = `src/app-${hours}_${minutes}_${seconds}.log`;
+  const fileName = `app-${hours}_${minutes}_${seconds}.log`;
 
   fs.writeFile(
     fileName,
