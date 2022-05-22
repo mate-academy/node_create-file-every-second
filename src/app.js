@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 'use strict';
 
 const fs = require('fs');
@@ -15,6 +14,6 @@ setInterval(() => {
       return;
     }
 
-    console.log(`In ${date} was created ${fileName}`);
+    process.stdout.write(`In ${date} the ${fileName} was created\n`);
   });
 }, 1000);
