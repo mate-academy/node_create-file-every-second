@@ -14,7 +14,7 @@ setInterval(() => {
     + padTo2Digits(date.getMinutes())
     + `_${padTo2Digits(date.getSeconds())}`;
 
-  fs.writeFile(`./src/${fileName}`, new Date().toString(), (error) => {
+  fs.writeFile(`./src/${fileName}.log`, new Date().toString(), (error) => {
     if (error) {
       throw new Error(error.message);
     }
