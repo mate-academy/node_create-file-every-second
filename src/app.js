@@ -14,12 +14,14 @@ setInterval(() => {
     + padTo2Digits(date.getMinutes())
     + `_${padTo2Digits(date.getSeconds())}`;
 
-  fs.writeFile(`./src/${fileName}.log`, new Date().toString(), (error) => {
+  const fileContent = date.toString();
+
+  fs.writeFile(`./src/${fileName}.log`, fileContent, (error) => {
     if (error) {
       throw new Error(error.message);
     }
 
-    console.log('Created: ', new Date().toString());
-    console.log('File name: ', fileName);
+    console.log('Created: ', date.toString());
+    console.log('File name: ', fileContent);
   });
 }, 1000);
