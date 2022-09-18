@@ -21,7 +21,7 @@ setInterval(() => {
       throw new Error(error.message);
     }
 
-    console.log('Created: ', date.toString());
+    console.log('Created: ', fileName);
     console.log('File name: ', fileContent);
   });
 }, 1000);
