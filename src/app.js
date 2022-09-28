@@ -9,13 +9,11 @@ setInterval(() => {
   const minutes = timestamp.split(':')[1];
   const seconds = timestamp.split(':')[2];
 
-  console.log(timestamp);
-
   fs.writeFile(`./src/app-${hours}_${minutes}_${seconds}.log`,
     timestamp,
     er => {
-      if (er) {
-        console.log('Error', er.code);
+      if (!er) {
+        console.log(timestamp);
       }
     });
 }, 1000);
