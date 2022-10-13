@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 /* eslint-disable no-console */
 'use strict';
 
@@ -10,9 +9,12 @@ const makeFileEverySecond = () => {
   const minutes = date.getMinutes();
   const hours = date.getHours();
 
-  fs.writeFile(`${hours}_${minutes}_${seconds}`, `${date.toLocaleTimeString()}`, () => {
-    console.log(date.toLocaleTimeString());
-  });
+  fs.writeFile(
+    `${hours}_${minutes}_${seconds}`,
+    `${date.toLocaleTimeString()}`,
+    () => {
+      console.log(date.toLocaleTimeString());
+    });
 };
 
 setInterval(() => {
