@@ -10,19 +10,16 @@ function infinityCreation() {
     ('0' + myDate.getMinutes()).slice(-2)}_${
     ('0' + myDate.getSeconds()).slice(-2)}`;
 
-  const currentTimeForConsole = `${
-    ('0' + myDate.getHours()).slice(-2)}:${
-    ('0' + myDate.getMinutes()).slice(-2)}:${
-    ('0' + myDate.getSeconds()).slice(-2)}`;
+  const currentTimeForConsole = myDate.getTime();
 
   setTimeout(() => {
-    fs.writeFile(`./src/app-${currentTime}.log`, myDate.toString('utf8'),
+    fs.writeFile(`./src/app-${currentTime}.log`, String(currentTimeForConsole),
       (error) => {
         if (error) {
           throw new Error('ERROR');
         } else {
           console.log(currentTimeForConsole);
-          console.log(myDate.toString('utf8'));
+          console.log(`app-${currentTime}.log`);
         }
       });
 
