@@ -8,7 +8,7 @@ const createFile = () => {
 
   fs.writeFile(path, timeStamp, () => {
     if (fs.existsSync(path)) {
-      console.log(time, fileName);
+      console.log(timeStamp, fileName);
     }
   });
 };
