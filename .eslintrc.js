@@ -1,4 +1,5 @@
 module.exports = {
+  sourceType: 'module',
   extends: '@mate-academy/eslint-config',
   env: {
     jest: true
