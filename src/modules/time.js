@@ -1,13 +1,6 @@
 "use strict";
 
-const correction = (d) => {
-  const dToStr = String(d);
-  if (dToStr.length === 1) {
-    return `0${d}`;
-  }
-
-  return dToStr;
-};
+const correction = (d) => String(d).padStart(2, "0");
 
 const getTime = () => {
   const date = new Date();
