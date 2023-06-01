@@ -3,11 +3,15 @@
 
 const fs = require('fs');
 
+const stringConverter = (data) => {
+  return data.toString().padStart(2, '0');
+};
+
 function createLogFile() {
   const currentDate = new Date();
-  const hours = currentDate.getHours().toString().padStart(2, '0');
-  const minutes = currentDate.getMinutes().toString().padStart(2, '0');
-  const seconds = currentDate.getSeconds().toString().padStart(2, '0');
+  const hours = stringConverter(currentDate.getHours());
+  const minutes = stringConverter(currentDate.getMinutes());
+  const seconds = stringConverter(currentDate.getSeconds());
   const timestamp = `${hours}:${minutes}:${seconds}`;
   const filename = `app-${hours}_${minutes}_${seconds}.log`;
   const fileContent = timestamp;
